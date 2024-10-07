@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Define a codificação de caracteres para UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- Configura a viewport para dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Descrição da página para mecanismos de busca -->
+    <meta name="description" content="Meu primeiro projeto Spline - Uma experiência 3D interativa">
+    <!-- Palavras-chave relevantes para o conteúdo da página -->
+    <meta name="keywords" content="Spline, 3D, design, interativo, web">
+    <!-- Nome do autor da página -->
+    <meta name="author" content="Ricardo Andreotti">
+    <!-- Instruções para robôs de busca -->
+    <meta name="robots" content="index, follow">
+    <!-- Define a cor do tema para navegadores móveis -->
+    <meta name="theme-color" content="#2d1e96">
+    <!-- Título da página exibido na aba do navegador -->
+    <title>My First Spline Project</title>
+    <!-- Importando o módulo Spline Viewer -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.28/build/spline-viewer.js"></script>
+    <!-- Importando a fonte Roboto do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Linkando o arquivo de estilos CSS -->
+    <link rel="stylesheet" href="src/css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="src/img/icon.png" alt="Powder Gate logo">
+</head>
+
+<body>
+    <!-- Elemento Spline Viewer com URL do projeto -->
+    <spline-viewer url="https://prod.spline.design/HFnZ4gKZaTVogVZI/scene.splinecode"></spline-viewer>
+
+    <!-- Barra de navegação -->
+    <nav class="navbar">
+        <a href="#" class="logo"><img src="src/img/icon.png" alt="Powder Gate logo" class="logo-icon">Spline</a>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Projects</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+        <button class="nav-btn">Login</button>
+    </nav>
+
+    <!-- Main content -->
+    <main class="content">
+        <div class="date" id="current-date"></div>
+        <h1>My First Spline Project</h1>
+        <p>This is an interactive project created with Spline, a 3D design tool for the web. Explore the three-dimensional environment and discover the creative possibilities that Spline offers for immersive web designs.</p>
+        <div class="buttons">
+            <a href="#" class="btn btn-discover">Discover More</a>
+            <a href="#" class="btn btn-action">Download Now</a>
+        </div>
+    </main>
+
+    <script src="src/js/main.js"></script>
+</body>
+</html>

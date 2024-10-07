@@ -1,0 +1,348 @@
+/* ===================
+   Regras Globais
+   =================== */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* ===================
+   Layout
+   =================== */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===================
+   Spline Viewer
+   =================== */
+
+spline-viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* ===================
+   Navbar
+   =================== */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    z-index: 2;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.navbar:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #d2c7ed;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+    color: #fff;
+}
+
+.logo-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-icon {
+    transform: rotate(360deg);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #d2c7ed;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #d2c7ed;
+    transform: translateY(-2px);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-btn {
+    padding: 10px 20px;
+    background-color: #2d1e96;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.nav-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+.nav-btn:hover {
+    background-color: #3a28b9;
+    box-shadow: 0 4px 8px rgba(45, 30, 150, 0.3);
+}
+
+.nav-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.nav-btn:active {
+    transform: scale(0.95);
+}
+
+/* ===================
+   Content
+   =================== */
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    max-width: 1000px;
+    transform: translateY(-50%);
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+.date {
+    font-size: 14px;
+    margin-bottom: 10px;
+    animation: slideInRight 1s ease;
+    color: #a8a8a8;
+}
+
+h1 {
+    font-size: 90px;
+    color: #d2c7ed;
+    margin-bottom: 30px;
+    font-weight: 700;
+    animation: slideInLeft 1s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    font-weight: 300;
+    animation: slideInRight 1s ease 0.3s backwards;
+    text-align: justify;
+    max-width: 60%;
+    color: #e6e6e6;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    animation: slideInUp 1s ease 0.6s backwards;
+}
+
+/* ===================
+   Buttons
+   =================== */
+
+.btn {
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    pointer-events: auto;
+    font-weight: 400;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn-discover {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+.btn-discover:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.btn-action {
+    background-color: #2d1e96;
+    color: white;
+    border: none;
+}
+
+.btn-action:hover {
+    background-color: #3a28b9;
+    box-shadow: 0 4px 8px rgba(45, 30, 150, 0.3);
+}
+
+/* ===================
+   Animations
+   =================== */
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* ===================
+   Media Queries
+   =================== */
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .content {
+        left: 20px;
+        right: 20px;
+    }
+
+    h1 {
+        font-size: 52px;
+    }
+
+    p {
+        font-size: 16px;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 45px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        width: 75%;
+    }
+
+    p {
+        max-width: 100%;
+    }
+}
