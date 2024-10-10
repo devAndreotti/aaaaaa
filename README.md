@@ -21,8 +21,10 @@ Este projeto é um ambiente 3D interativo desenvolvido usando o Spline, uma plat
 - **Experiência Imersiva:** Mergulhe em um ambiente visualmente atraente com efeitos de iluminação e textura.
 
 ## 🛠 Tecnologias
-- **Spline:** A ferramenta utilizada para construir o ambiente 3D e definir a interatividade.
-- **HTML5, CSS3, JavaScript:** Linguagens de desenvolvimento web que permitem a criação de interfaces responsivas e interação.
+- **Spline:** A ferramenta utilizada para construir o ambiente 3D e definir a interatividade. [Acesse o site do Spline aqui](https://spline.design/).
+- **JavaScript:** [Aprenda JavaScript com a MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript).
+- **HTML5:** [Aprenda HTML5 com a MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTML).
+- **CSS3:** [Aprenda CSS3 com a MDN](https://developer.mozilla.org/pt-BR/docs/Web/CSS).
 
 ## 🌐 Visualize
 Você pode visualizar o projeto online através deste [link](https://devandreotti.github.io/my-first-spline-project/).
@@ -37,7 +39,7 @@ Você pode visualizar o projeto online através deste [link](https://devandreott
 └── README.md
 ```
 
-## 🧭 Como Usar
+## 🕹️ Experimente
 1. **Clone o repositório:**
    ```bash
    git clone https://github.com/devAndreotti/my-first-spline-project.git
