@@ -1,4 +1,5 @@
-## 🎨 My First Spline Project
+<!-- Projeto Finalizado -->
+# 🎨 My First Spline Project
 <p align="center">
   <!-- Contador de linguagens do GitHub -->
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/devAndreotti/my-first-spline-project?color=FFF&labelColor=a906e0&style=flat-square">
@@ -21,7 +22,7 @@ Este projeto é um ambiente 3D interativo desenvolvido usando o Spline, uma plat
 - **Experiência Imersiva:** Mergulhe em um ambiente visualmente atraente com efeitos de iluminação e textura.
 
 ## 🛠 Tecnologias
-- **Spline:** A ferramenta utilizada para construir o ambiente 3D e definir a interatividade. [Acesse o site do Spline aqui](https://spline.design/).
+- **Spline:** Utilizado para construir o ambiente 3D e definir a interatividade. [Acesse o site do Spline aqui](https://spline.design/).
 - **JavaScript:** [Aprenda JavaScript com a MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript).
 - **HTML5:** [Aprenda HTML5 com a MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTML).
 - **CSS3:** [Aprenda CSS3 com a MDN](https://developer.mozilla.org/pt-BR/docs/Web/CSS).
