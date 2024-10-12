@@ -2,35 +2,53 @@
 <html lang="pt-BR">
 
 <head>
-    <!-- Define a codificação de caracteres para UTF-8 -->
     <meta charset="UTF-8">
-    <!-- Configura a viewport para dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Descrição da página para mecanismos de busca -->
     <meta name="description" content="Meu primeiro projeto Spline - Uma experiência 3D interativa">
-    <!-- Palavras-chave relevantes para o conteúdo da página -->
     <meta name="keywords" content="Spline, 3D, design, interativo, web">
-    <!-- Nome do autor da página -->
     <meta name="author" content="Ricardo Andreotti">
-    <!-- Instruções para robôs de busca -->
     <meta name="robots" content="index, follow">
-    <!-- Define a cor do tema para navegadores móveis -->
     <meta name="theme-color" content="#2d1e96">
-    <!-- Título da página exibido na aba do navegador -->
     <title>My First Spline Project</title>
-    <!-- Importando o módulo Spline Viewer -->
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.30/build/spline-viewer.js"></script>
-    <!-- Importando a fonte Roboto do Google Fonts -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.28/build/spline-viewer.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <!-- Linkando o arquivo de estilos CSS -->
     <link rel="stylesheet" href="src/css/style.css">
-    <!-- Favicon -->
     <link rel="icon" href="src/img/icon.png" alt="Powder Gate logo">
 </head>
 
 <body>
-    <!-- Elemento Spline Viewer com URL do projeto -->
-    <spline-viewer url="https://prod.spline.design/HFnZ4gKZaTVogVZI/scene.splinecode"></spline-viewer>
+    <!-- Spline container -->
+    <div id="spline-container"></div>
+
+    <script>
+        // Função para carregar o Spline correto baseado na largura da tela
+        function loadSpline() {
+            const container = document.getElementById('spline-container');
+            
+            // Verifica se é um dispositivo móvel (tela menor que 768px)
+            if (window.innerWidth < 768) {
+                // Carrega a versão leve para dispositivos móveis
+                const viewerMobile = document.createElement('spline-viewer');
+                viewerMobile.setAttribute('url', 'https://prod.spline.design/SKGpUlappasn5RIS/scene.splinecode'); // URL da versão leve
+                container.appendChild(viewerMobile);
+            } else {
+                // Carrega a versão completa para telas maiores
+                const viewerDesktop = document.createElement('spline-viewer');
+                viewerDesktop.setAttribute('url', 'https://prod.spline.design/HFnZ4gKZaTVogVZI/scene.splinecode'); // URL da versão completa
+                container.appendChild(viewerDesktop);
+            }
+        }
+
+        // Chama a função de carregamento ao carregar a página
+        window.onload = loadSpline;
+
+        // Recarrega o conteúdo ao redimensionar a janela
+        window.onresize = function() {
+            const container = document.getElementById('spline-container');
+            container.innerHTML = ''; // Limpa o conteúdo anterior
+            loadSpline(); // Recarrega com base na nova largura
+        };
+    </script>
 
     <!-- Barra de navegação -->
     <nav class="navbar">
